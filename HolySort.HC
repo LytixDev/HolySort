@@ -24,7 +24,7 @@ inline I32 Partition(int arr[], int low, int high) {
     return i + 1;
 }
 
-void Quicksort(I32 arr[], int low, int high) {
+U0 Quicksort(I32 arr[], int low, int high) {
     if (low < high) {
         I32 pi = Partition(arr, low, high);
         Quicksort(arr, low, pi - 1);
