@@ -1,4 +1,4 @@
-inline U0 Swap(I32 *a, int *b) {
+inline U0 Swap(I32 *a, I32 *b) {
     asm(
         "mov eax, [ebp + 8]\n\t"
         "mov ebx, [ebp + 12]\n\t"
@@ -9,7 +9,7 @@ inline U0 Swap(I32 *a, int *b) {
     );
 }
 
-inline I32 Partition(int arr[], int low, int high) {
+inline I32 Partition(I32 arr[], I32 low, I32 high) {
     I32 pivot = arr[high];
     I32 i = low - 1;
 
@@ -24,7 +24,7 @@ inline I32 Partition(int arr[], int low, int high) {
     return i + 1;
 }
 
-U0 Quicksort(I32 arr[], int low, int high) {
+U0 Quicksort(I32 arr[], I32 low, I32 high) {
     if (low < high) {
         I32 pi = Partition(arr, low, high);
         Quicksort(arr, low, pi - 1);
